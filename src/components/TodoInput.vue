@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="text" v-model="newTodoItmes">
+        <input type="text" v-model="newTodoItme">
         <button v-on:click="addTodo">추가</button>
         
     </div>
@@ -15,9 +15,10 @@ export default {
     },
     methods: {
         addTodo(){
-            console.log(this.newTodoItmes);
+            localStorage.setItem(this.newTodoItme, this.newTodoItme);
+            console.log(this.newTodoItme)
         }
-    },
+    }
 }
 </script>
 
