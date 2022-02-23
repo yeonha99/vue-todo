@@ -32,6 +32,8 @@ export default {
         clearInput(){
             this.newTodoItme='';
         }
+        ,
+
     }
 }
 </script>
