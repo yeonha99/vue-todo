@@ -15,8 +15,18 @@ export default {
     },
     methods: {
         addTodo(){
-            localStorage.setItem(this.newTodoItme, this.newTodoItme);
-            console.log(this.newTodoItme)
+            if(this.newTodoItme!=""){
+                var value = this.newTodoItme&&this.newTodoItme.trim()
+                //텍스트의 앞뒤 공백 문자열 제거
+                localStorage.setItem(value, value);
+                console.log(value)
+                this.clearInput()
+            }
+
+        }
+        ,
+        clearInput(){
+            this.newTodoItme='';
         }
     }
 }
